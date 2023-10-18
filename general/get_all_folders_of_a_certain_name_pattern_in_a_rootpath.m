@@ -3,7 +3,7 @@
 % 2023-10-07, Yixuan Li (Modified by ChatGPT)
 %
 
-function list = get_all_folders_of_a_certain_name_pattern_in_a_rootpath(rootpath, folderPattern)
+function list = get_all_folders_of_a_certain_name_pattern_in_a_rootpath(rootpath, folder_pattern)
 
 % Obtain all the subfolders recursively
 folders = string(split(genpath(rootpath), pathsep));
@@ -21,7 +21,7 @@ for i = 1:length(folders)
     allItems = dir(folders{i});
     
     % Filter for items that are folders and match the folderPattern
-    matchingFolders = allItems([allItems.isdir] & contains({allItems.name}, folderPattern));
+    matchingFolders = allItems([allItems.isdir] & contains({allItems.name}, folder_pattern));
     
     % Loop over all matching folders and append to the list
     for j = 1:length(matchingFolders)

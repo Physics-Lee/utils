@@ -21,7 +21,7 @@ if isempty(answer) || isempty(answer{1})
     return;
 end
 
-folderPattern = answer{1};
+folder_pattern = answer{1};
 
 %% delete
 
@@ -32,7 +32,7 @@ path = uigetdir;
 if path ~= 0
 
     % Get all subfolders matching the pattern recursively.
-    all_folders = get_all_folders_of_a_certain_name_pattern_in_a_rootpath(path, folderPattern);
+    all_folders = get_all_folders_of_a_certain_name_pattern_in_a_rootpath(path, folder_pattern);
 
     % If no matched folders are found.
     if isempty(all_folders)
