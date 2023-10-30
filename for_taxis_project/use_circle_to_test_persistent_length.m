@@ -1,4 +1,4 @@
- % use a circle to test if the code of persistent length is right.
+% use a circle to test if the code of persistent length is right.
 %
 % 2023-09-26, Yixuan Li
 %
