@@ -9,7 +9,7 @@ clc;clear;close all;
 %% input folder pattern
 
 % Create GUI to prompt the user for the type of folder to search for.
-prompt = {'Enter the folder name or pattern (e.g., data_.*):'};
+prompt = {'Enter the folder name or pattern (e.g., ^disp$):'};
 title = 'Folder Search Pattern';
 dims = [1 60];
 definput = {''};
