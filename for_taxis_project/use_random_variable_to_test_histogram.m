@@ -5,7 +5,7 @@
 
 n_sample = 10000;
 x = randn(n_sample);
-% x = abs(x);
+x = abs(x);
 
 figure;
 histogram(x);
