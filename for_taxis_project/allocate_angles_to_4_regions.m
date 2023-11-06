@@ -17,6 +17,11 @@ elseif option_taxis == "Or" || option_taxis == "Ctl" || option_taxis == "Pa"
     is_region_2 = theta_in > pi/2;
     is_region_3 = theta_in < -pi/2;
     is_region_4 = theta_in < 0 & theta_in > -pi/2;
+elseif option_taxis == "NC_Runhui"
+    is_region_1 = theta_in > +1/4*pi & theta_in < +3/4*pi;
+    is_region_2 = theta_in > +3/4*pi | theta_in < -3/4*pi;
+    is_region_3 = theta_in > -3/4*pi & theta_in < -1/4*pi;
+    is_region_4 = theta_in > -1/4*pi & theta_in < +1/4*pi;
 end
 
 % init
