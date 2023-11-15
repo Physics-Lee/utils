@@ -1,5 +1,13 @@
 % Allocate angles (theta, Delta theta, etc) to 4 regions according to theta_in
 %
+% Input:
+% - option_taxis: contains info of taxis.
+% - theta_in: theta in of each cell
+% - array_of_angles: cell array (most case) or numerical array of angles 
+% (only for biased reorientation).
+%
+% Output: 4 numerical array of 4 regions.
+%
 % 2023-11-06, Yixuan Li
 %
 
