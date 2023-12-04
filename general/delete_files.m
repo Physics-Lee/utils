@@ -8,10 +8,10 @@ clc;clear;close all;
 %% input strings
 
 % Create GUI to input file extension
-prompt = {'Enter file extension (e.g., *.png):'};
+prompt = {'Enter file extension (e.g., *.tif):'};
 title = 'Input';
 dims = [1 50];
-definput = {'*.png'};
+definput = {'*.tif'};
 answer = inputdlg(prompt, title, dims, definput);
 
 % If the user presses 'Cancel' or provides an empty input, exit
