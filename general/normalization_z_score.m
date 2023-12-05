@@ -3,8 +3,8 @@
 % Yixuan Li, 2023-12-05
 %
 
-function y = normalization_to_0_1(x)
+function y = normalization_z_score(x)
 
-y = (x - min(x))./(max(x) - min(x));
+y = z_score(x);
 
 end
