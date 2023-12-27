@@ -1,7 +1,7 @@
 function two_sample_t_test(data_1,data_2)
 
 % Unpaired t-test
-[~, p, ~, ~] = ttest2(data_1, data_2);
+[~, p_value, ~, ~] = ttest2(data_1, data_2);
 
 % Bar graph
 figure;
@@ -13,7 +13,7 @@ errorbar(means, errors, '.');
 hold off;
 
 % Display p-value
-p_value_text = sprintf('p = %.3f', p);
+p_value_text = sprintf('p = %.3f', p_value);
 text(1.5, max(means) + max(errors), p_value_text, 'HorizontalAlignment', 'center');
 
 % Labels and Title
