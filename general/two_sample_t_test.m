@@ -1,7 +1,7 @@
 function two_sample_t_test(data_1,data_2)
 
 % Unpaired t-test
-[h, p, ci, stats] = ttest2(data_1, data_2);
+[~, p, ~, ~] = ttest2(data_1, data_2);
 
 % Bar graph
 figure;
