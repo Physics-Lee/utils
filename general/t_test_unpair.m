@@ -1,3 +1,10 @@
+% Make some small simulations to explore the property of t test.
+% You can find that, multiply a const won't change the p-value while
+% nomalize to z-score will change the p-value.
+%
+% Yixuan Li, 2024-01-03
+%
+
 clc;clear;close all;
 
 %%
