@@ -1,0 +1,3 @@
+[submodule "for_Colbert/calculate_the_curvature_of_a_centerline"]
+	path = for_Colbert/calculate_the_curvature_of_a_centerline
+	url = https://github.com/Wenlab/Calculate_the_Curvature_of_a_Centerline.git
