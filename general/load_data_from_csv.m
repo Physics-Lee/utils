@@ -1,7 +1,8 @@
 % Load data from a CSV file
 %
 % The CSV file should contain headers in the first row.
-% If the data is purely numeric, it will convert the table to an array.
+% If the data is purely numeric, it will convert the table to an array. If
+% not, remain a table.
 %
 % 2023-10-24, Yixuan Li
 %
