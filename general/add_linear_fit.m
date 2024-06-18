@@ -1,9 +1,10 @@
 % add linear fit to test Poisson process, using least square and calculate 
-% the coefficient of determination
-%
-% SS means Sum of Square
-%
+% the coefficient of determination. SS means Sum of Square. 
 % use pdf, instead of probability, to get lambda in the future.
+%
+% Input:
+% - time_of_disp: time of run disp or reorientation disp
+% - edges: range of data to be fitted% 
 %
 % 2023-11-05, Yixuan Li
 %

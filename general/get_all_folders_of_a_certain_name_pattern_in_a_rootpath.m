@@ -1,4 +1,4 @@
-% get all folders of a certain name pattern in a rootpath and its sub-folders.
+% get all folders containing a certain name pattern in a rootpath and its sub-folders.
 %
 % genpath can obtain all subfolders.
 %
