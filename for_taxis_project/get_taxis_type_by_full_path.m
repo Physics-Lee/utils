@@ -8,7 +8,8 @@ function option_taxis = get_taxis_type_by_full_path(full_path)
 if contains(full_path,'NC')
     option_taxis = "NC";
 elseif contains(full_path,'NT')
-    option_taxis = "NT";
+    % option_taxis = "NT";
+    option_taxis = "Or"; % for comparing RIA NT and RIA Or
 elseif contains(full_path,'Or') || contains(full_path,'ortho')
     option_taxis = "Or";
 elseif contains(full_path,'Ctl') || contains(full_path,'ctl')
