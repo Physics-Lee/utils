@@ -3,13 +3,18 @@
 % 2023-10-13, Yixuan Li
 %
 
-function all_centerline = get_all_centerlines_in_absolute_frame(mcd)
+function all_centerline = get_all_centerlines_in_absolute_frame(mcd, flag_method)
 
 n_frames = length(mcd);
 all_centerline = cell(n_frames,1);
-for i = 1:n_frames    
-    centerline = convert_coordinates_and_add_stage_position(mcd(i).SegmentedCenterline, mcd(i).StagePosition);    
-    all_centerline{i,1} = centerline;    
+for i = 1:n_frames
+    switch flag_method
+        case "online"
+            centerline = convert_coordinates_and_add_stage_position(mcd(i).SegmentedCenterline, mcd(i).StagePosition);
+        case "offline"
+            centerline = convert_coordinates_and_add_stage_position(0.5 * (mcd(i).BoundaryA + mcd(i).BoundaryB), mcd(i).StagePosition);
+    end
+    all_centerline{i,1} = centerline;
 end
 
 end

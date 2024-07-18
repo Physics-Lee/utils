@@ -3,7 +3,7 @@
 % 2024-05-08, Yixuan Li
 %
 
-function all_centerline = get_all_centerlines_in_relative_frame(mcd,flag_method)
+function all_centerline = get_all_centerlines_in_relative_frame(mcd, flag_method)
 
 n_frames = length(mcd);
 all_centerline = cell(n_frames,1);
