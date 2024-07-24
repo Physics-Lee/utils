@@ -12,7 +12,7 @@ boundary_B_all = cell(n_frames,1);
 count = 0;
 for i = start_frame:end_frame
     count = count + 1;
-    centerline_all{count,1} = reshape(mcd(i).SegmentedCenterline,2,100);
+    centerline_all{count,1} = reshape(0.5*(mcd(i).BoundaryA+mcd(i).BoundaryB),2,100);
     boundary_A_all{count,1} = reshape(mcd(i).BoundaryA,2,100);
     boundary_B_all{count,1} = reshape(mcd(i).BoundaryB,2,100);
 end
