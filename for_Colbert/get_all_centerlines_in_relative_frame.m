@@ -5,6 +5,10 @@
 
 function all_centerline = get_all_centerlines_in_relative_frame(mcd, flag_method)
 
+if nargin < 2
+    flag_method = "offline";
+end
+
 n_frames = length(mcd);
 all_centerline = cell(n_frames,1);
 for i = 1:n_frames

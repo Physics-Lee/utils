@@ -21,16 +21,13 @@ function curvature_of_centerline = calculate_the_curvature_of_a_centerline(cente
 %   - yixuanli@mail.ustc.edu.cn or bruce.yixuan.li@gmail.com
 %
 
-%% Calculate distances along the centerline
+%% Perform spline fitting
 d = calculate_distances(centerline);
-
-%% Perform spline smooth
-centerline_smoothed = perform_spline_smoothing(centerline, d);
-d_smoothed = calculate_distances(centerline_smoothed);
+centerline_fitted = perform_spline_smoothing(centerline, d);
 
 %% Perform linear interpolation
-centerline_interpolated = perform_linear_interpolation(centerline_smoothed, d_smoothed);
-centerline_interpolated = centerline_interpolated';
+d_smoothed = calculate_distances(centerline_fitted);
+centerline_interpolated = perform_linear_interpolation(centerline_fitted, d_smoothed)';
 
 %% Calculate curvature from the interpolated centerline
 curvature_of_centerline = calculate_the_curvature(centerline_interpolated');

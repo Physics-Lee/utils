@@ -1,4 +1,4 @@
-function centerline_interpolated = perform_linear_interpolation(coords, d)
+function centerline_interpolated = perform_linear_interpolation(coords, d, n_curvpts)
 
 % Performs linear interpolation on a curve.
 %
@@ -8,7 +8,7 @@ function centerline_interpolated = perform_linear_interpolation(coords, d)
 %                      ensure uniqueness by adding a small increment.
 %
 % Returns:
-%   - centerline_interpolated (n_curvpts+2)x2 double: Interpolated coordinates.
+%   - centerline_interpolated (n_curvpts + 2) x 2 double: Interpolated coordinates.
 %
 % Tips:
 %   - The result WILL pass all the original data points.
@@ -23,7 +23,10 @@ function centerline_interpolated = perform_linear_interpolation(coords, d)
 %   - yixuanli@mail.ustc.edu.cn or bruce.yixuan.li@gmail.com
 %
 
-n_curvpts = 100;
+if nargin <= 2
+    n_curvpts = 100;
+end
+
 d_max = d(end);
 centerline_interpolated = interp1(d + 0.00001*(0:length(d)-1), coords', ...
     linspace(0, d_max - 1, n_curvpts + 2));
